@@ -1,0 +1,91 @@
+<ol>
+
+    <li>
+      <label>
+        Select a state:
+        <select [(ngModel)]="selectedState">
+          <option *ngFor="let state of states" [value]="state.name">
+            {{ state.name }}
+          </option>
+        </select>
+      </label>
+    </li>
+  
+    <li>
+  
+      <label>
+        Select a country:
+        <select [(ngModel)]="selectedCountry" (ngModelChange)="updateStates()" >
+          <option   value="none" selected disabled hidden  >Select your country</option>
+          <option *ngFor="let country of countries" [value]="country.name">
+            {{ country.name }}
+          </option>
+        </select>
+      </label>
+    </li>
+  </ol>
+
+
+
+
+<!-- <h2> *ngFor Assignment </h2>
+&nbsp;
+<div>
+    <label>Please Select Country:</label>
+    <select> Select the country
+        <option>Country</option>
+        <option *ngFor=" let country of countries">{{country}}</option>
+    </select>
+</div>
+&nbsp;
+<div>
+    <label>Please Select State:</label>
+    <select>
+        <option>States</option>
+        <option *ngFor="let states of states">{{states}}</option>
+        
+
+    </select>
+</div> -->
+
+<!-- <li *ngFor ="let country of countries">{{country}}</li> -->
+
+
+
+
+<!-- <div>
+    <div>
+        {{title}}
+    </div>
+
+
+    
+
+    <div>
+        <div>
+            <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Director</th>
+                            <th>Cast</th>
+                            <th>ReleaseDate</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let movie of movies">
+                            <td>{{movie.title}}</td>
+                            <td>{{movie.director}}</td>
+                            <td>{{movie.cast}}</td>
+                            <td>{{movie.releaseDate}}</td>
+                        </tr>
+                        
+                    </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<ul>
+    <li *ngFor="let songs of favSongs">{{songs}}</li>
+</ul>
+ -->

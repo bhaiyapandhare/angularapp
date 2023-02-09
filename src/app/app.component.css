@@ -1,0 +1,20 @@
+#space{
+    margin-bottom: 20px;
+    background-color: rgb(189, 138, 72);
+    font-size: x-large;
+}
+li{
+    font-size: x-large;
+}
+input{
+    font-size: x-large;
+border-style:dotted;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+    
+}

@@ -1,0 +1,14 @@
+<div>
+    <label>Select Country:</label>
+    <select [(ngModel)]="selectedCountry" (ngModelChange)="updateStates()">
+      <option value="">Select your country</option>
+      <option *ngFor="let country of countries" [value]="country.code"  >{{country.name}}</option>
+    </select>
+  </div>
+  <br>
+  <div>
+    <label>Select State:</label>
+    <select [(ngModel)]="selectedState">
+      <option *ngFor="let state of states" [value]="state.code">{{state.name}}</option>
+    </select>
+  </div>
