@@ -1,5 +1,23 @@
-<ol>
+<!-- <ol>
 
+  <li>
+  
+    <label class="laga">
+      Select a country:
+      <select [(ngModel)]="selectedCountry" (ngModelChange)="updateStates()" >
+        <option   value="none" selected disabled hidden  >Select your country</option>
+
+        <option *ngFor="let country of countries" [value]="country.name">
+          {{ country.name }}
+
+        </option>
+
+      </select>
+    </label>
+  
+  </li>
+
+  
     <li>
       <label>
         Select a state:
@@ -11,30 +29,19 @@
       </label>
     </li>
   
-    <li>
-  
-      <label>
-        Select a country:
-        <select [(ngModel)]="selectedCountry" (ngModelChange)="updateStates()" >
-          <option   value="none" selected disabled hidden  >Select your country</option>
-          <option *ngFor="let country of countries" [value]="country.name">
-            {{ country.name }}
-          </option>
-        </select>
-      </label>
-    </li>
-  </ol>
+   
+  </ol> -->
 
 
 
 
-<!-- <h2> *ngFor Assignment </h2>
+<h2> *ngFor Assignment </h2>
 &nbsp;
 <div>
     <label>Please Select Country:</label>
-    <select> Select the country
+    <select (change)="changeCountry($event.target.value)"> Select the country
         <option>Country</option>
-        <option *ngFor=" let country of countries">{{country}}</option>
+        <option *ngFor=" let count of countryList">{{count.name}}</option>
     </select>
 </div>
 &nbsp;
@@ -42,13 +49,13 @@
     <label>Please Select State:</label>
     <select>
         <option>States</option>
-        <option *ngFor="let states of states">{{states}}</option>
+        <option *ngFor="let state of states">{{state}}</option>
         
 
     </select>
-</div> -->
+</div> 
 
-<!-- <li *ngFor ="let country of countries">{{country}}</li> -->
+<!-- <li *ngFor ="let country of countries">{{country}}</li>
 
 
 

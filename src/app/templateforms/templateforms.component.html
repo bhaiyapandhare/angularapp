@@ -1,0 +1,153 @@
+<mat-card class="login-page">
+    <mat-card-title>
+        Login (Template-Driven) 
+    </mat-card-title>
+    <mat-card-content>
+        <form class="login-form" #loginForm="ngForm">
+          <mat-form-field>
+                  
+            <input matInput type="email" name="email"
+            ngModel
+            #email="ngModel"
+            required email 
+            pattern="^[a-z0-9._%+-]+@[codemindtechnology.com]+\.[a-z]{2,4}$"
+            placeholder="Email">
+  
+            <mat-error *ngIf="email.errors?.required">The email is mandatory</mat-error>
+            <mat-error *ngIf="email.errors?.pattern">
+              Enter the valid domain email
+            </mat-error>
+          </mat-form-field>
+  
+           
+            <!-- <mat-form-field>
+                
+                <input matInput type="email" name="email"
+                ngModel
+                #email="ngModel"
+                required email 
+                placeholder="Email">
+  
+               
+  
+               <small *ngIf="!email.valid && email.touched">This email is mandatory</small>
+            </mat-form-field> -->
+            
+          
+            <!-- <small *ngIf="!userDetail.valid && userDetail.touched">This email is mandatory</small> -->
+            <!-- <mat-error *ngIf="userDetail.email.errors?.required">The email is mandatory.</mat-error> -->
+            <mat-form-field>
+                <input matInput  ngModel  #password="ngModel"  name="password" type="password" placeholder="Password" required >
+            </mat-form-field>
+        
+            <!-- <mat-form-field appearance="fill">
+                <mat-label [ngModel]="defaultValue"></mat-label>
+                <mat-select  >
+                  <mat-option value="Angular">Angular</mat-option>
+                  <mat-option value="Javascript" >Javascript</mat-option>
+                  <mat-option value="Typescript">Typescript</mat-option>
+                </mat-select>
+              </mat-form-field> -->
+  
+              <select class="form-control" name="course" [(ngModel)]="defaultValue" >
+                <option *ngFor="let course of courses"  [value]="course">{{course}}</option>
+              </select>
+  
+              <div class="form-group" *ngFor="let gender of genders">
+  
+  
+                <input type="radio" name="gender" id="gender" [value]="gender.value" [(ngModel)]="defaultGender"
+                class="custom-control custom-radio">
+                <label for="{{gender.id}}">{{gender.value}}</label>
+              </div>
+            <!-- <button  mat-raised-button  (click)="login(loginForm)">Reset and set default value</button> -->
+       
+            <button class="btn btn-primary"mat-raised-button  (click)="login(loginForm)">
+              <span class="button_lg">
+                  <span class="button_sl"></span>
+                  <span class="button_text">Login </span>
+              </span>
+          </button>
+          </form>
+        <div class="form-val">
+            <!-- {{ loginForm.value | json}} -->
+        </div>
+    </mat-card-content>
+  </mat-card>
+  <hr>
+  <div class="row justify-content-center mt2" *ngIf="isSubmitted">
+    <div class="col-md-6 rounded shadow py-4">
+      <h2>Form Data</h2>
+      <p>Email: <strong>{{formData.email}}</strong></p>
+      <p>Password: <strong>{{formData.password}}</strong></p>
+      <p>Course: <strong>{{formData.course}}</strong></p>
+      <p>Gender: <strong>{{formData.gender}}</strong></p>
+  
+    </div>
+  </div>
+
+
+
+<!-- <mat-card class="login-page">
+
+
+<head>
+    <title> Bank Loan Application Form</title>
+</head>
+
+<body>
+    <h2>Account Creation Form </h2>
+    Personal Information <br>
+<form>
+
+    <label> Name of Applicant</label><br>
+    <mat-form-field>
+
+    <input matInput  ngModel name="name" type="name" placeholder="enter full name">
+
+    </mat-form-field><br>
+    <label> E-mail of Applicant </label><br>
+    <mat-form-field>
+
+    <input matInput #email="" ngModel name="email" type="email" placeholder="Email">
+</mat-form-field>
+
+</form>
+
+    <label>Mobile number of Applicant </label>
+    <mat-form-field>
+
+    <input matInput  ngModel name="mobile no " type="number" placeholder="enter 10 digits only">
+   </mat-form-field>
+
+    <label>Address of Applicant </label>
+    <mat-form-field>
+
+    <input matInput  ngModel name="address " type="text" placeholder="address">
+    </mat-form-field>
+<br> -->
+    <!-- <form> <input type="text"><select>
+        <option>Please Select</option>
+        <option>India </option>
+        <option> Us</option>
+        <option>Aus </option> -->
+        <!-- <mat-label>Select State</mat-label>
+
+        <mat-select>
+            <mat-option value="one">India</mat-option>
+            <mat-option value="two">Us</mat-option>
+            <mat-option value="two">Aus</mat-option>
+
+          </mat-select>
+     </select> </form> -->
+
+
+   
+    <!-- <label>Date of Birth Applicant </label><br>
+
+<input type="date">
+<br><br><button [disabled]="!loginForm.valid"  mat-raised-button color="primary" (click)="login(loginForm)">Submit</button>
+
+</body>
+
+</mat-card> -->

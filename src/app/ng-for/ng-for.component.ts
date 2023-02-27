@@ -21,44 +21,56 @@ export class NgForComponent implements OnInit {
   favSongs =[`Ved Tuze`, `Dhaga Dhaga`,`Jiv Rangala`];
 
 
-  // countries =[ "India" , "Mexico"];
-  // states =["Mahrashtra", "Kerala", "Kashmir", "Rajasthan", "Baja California","Durango","Mexico","Sonora"]
+  countryList:Array<any> =[
+{ name:'India', states:['Maharashtra', 'Kerala', 'Kashmir', `Rajasthan`]},
+{ name:'Mexico', states:[`Mexico`, 'Sonora','Durango', 'Sinoloa']}
 
-  countries = [
-  {
-    name: 'India',
-    states: [
-      { name: 'Maharashtra' },
-      { name: 'Kerala' },
-      // Add more states here
-    ]
-  },
-  {
-    name: 'Mexico',
-    states: [
-      { name: 'Mexico' },
-      { name: 'Durango' },
-      // Add more states here
-    ]
+  ];
+
+  states:Array<any>;
+
+  changeCountry(count){
+    this.states=this.countryList.find(con =>con.name == count).states;
+
+
   }
-  // Add more countries here
-];
 
-selectedCountry = '';
-selectedState = '';
-states = [];
+
+//   countries = [
+//   {
+//     name: 'India',
+//     states: [
+//       { name: 'Maharashtra' },
+//       { name: 'Kerala' },
+//       // Add more states here
+//     ]
+//   },
+//   {
+//     name: 'Mexico',
+//     states: [
+//       { name: 'Mexico' },
+//       { name: 'Durango' },
+//       // Add more states here
+//     ]
+//   }
+//   // Add more countries here
+// ];
+
+// selectedCountry = '';
+// selectedState = '';
+// states = [];
 
 
   constructor() { }
-  updateStates() {
+  // // updateStates() {
  
    
    
-      this.states = this.countries.find(country => country.name === this.selectedCountry).states;
-    }
-  ngOnInit() {
-      this.updateStates();
-    }
+  //     this.states = this.countries.find(country => country.name === this.selectedCountry).states;
+  //   }
+  // ngOnInit() {
+  //     this.updateStates();
+  //   }
 
  
 // if (countries =="India") {
@@ -69,4 +81,7 @@ states = [];
   
 // }  
 // }
+   ngOnInit() {
+
+}
 }

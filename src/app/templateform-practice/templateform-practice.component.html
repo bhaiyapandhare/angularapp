@@ -1,0 +1,66 @@
+<div class="form">
+<head>
+    <title> Bank Loan Application Form</title>
+</head>
+<form (ngSubmit)="onSubmit(myForm)" #myForm="ngForm">
+    <mat-card-content>
+
+    <h2>Bank Loan Application Form</h2>
+    Personal Information <br>
+    <mat-form-field>
+
+    <label> Name of Applicant</label>
+    <input type="text" placeholder="text only" name="name" ngModel> 
+    </mat-form-field>    
+    <br><br>
+
+    <mat-form-field>
+
+    <label> E-mail of Applicant </label>
+    <input type="text" placeholder="ex.myname@example.com" name="email" ngModel>
+    <br><br>
+    </mat-form-field>
+
+    <mat-form-field>
+
+    <label>Mobile number of Applicant </label>
+     <input type="number only"name="mob" ngModel>
+     <br><br>
+</mat-form-field>
+
+<mat-form-field>
+
+    <label>Address of Applicant </label>
+     <input type="text" name="Address" ngModel> 
+     <br><br>
+     </mat-form-field>
+
+     <mat-form-field>
+
+<label>State</label>
+    <select name="country" ngModel >
+
+
+        <option>Please Select State</option>
+        <option>India </option>
+        <option> Us</option>
+        <option>Aus </option>
+    </select>
+    <br><br>
+    </mat-form-field>
+
+
+    <mat-form-field>
+
+    <label>Date of Birth Applicant </label><br>
+    <input type="date" name="dob" ngModel>
+    <br><br>
+
+    </mat-form-field>
+    
+<input type="submit" value="Submit" id="btn"> 
+
+</mat-card-content>
+
+</form>
+</div>

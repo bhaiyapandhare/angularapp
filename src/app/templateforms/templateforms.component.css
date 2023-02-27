@@ -1,0 +1,26 @@
+.login-page {
+    max-width: 350px;
+    margin: 50px auto 0 auto;
+}
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-val {
+    margin-top: 10px;
+} 
+
+.login-page{
+    background-color: rgb(180, 248, 235);
+    box-shadow: 10px 10px 15px rgb(71, 70, 70);
+}
+input{
+    text-shadow: 10px 10px 14px rgb(106, 97, 97);
+
+}
+
+.form-control{
+    background-color: rgb(32, 201, 231);
+}

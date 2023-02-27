@@ -1,0 +1,35 @@
+<p>practice works!</p>
+<p>{{boss}}</p><p>{{Emp}}</p>
+
+
+<h2> Event Binding Example</h2> 
+	<button (click)="onSave(val)">Save</button>
+    <P>{{showText}}</P>
+
+
+    // Add to cart button and after clicking event msg "Product addded succesfully"
+
+    <button (click)="onAddCard()">Add to Cart</button>
+    <p>{{msg}}</p>
+<br> 
+// Three Buttons and massage on web : 
+<button value="Laptop" (click)="onClick($event)">Laptop</button>
+<button value="Tv" (click)="onClick($event)">Tv</button>
+<button value="Mobile" (click)="onClick($event)">Mobile</button>
+
+<p>{{onWeb}}</p>
+
+<button  (mouseenter)="onMouseOver()">Mouse Over </button>
+<P>{{show}}</P>
+<br>
+<input type="text" value={{username}} disabled="{{show1}}">
+<br><br>
+<input type="text" [value]=username [disabled]="show1">
+
+<br /> 
+<br>
+<input type="text" name="Save" value={{Emp}}>
+<br><br>
+<input type="button" name="Save" [value]=Emp>
+<br><br>
+<input type="button" name="Save" [value]=Emp [disabled]="display">

@@ -1,0 +1,37 @@
+
+<div style="margin-left: 30px;">
+<div  *ngFor="let b of books" ><p>{{b.title}}</p>
+   <div> <img *ngIf="b.imageurl else noImg" width="250px" height="200px" [src]="b.imageurl" alt="This is course image">
+    <ng-template #noImg> <p>No image is available</p> </ng-template></div>
+
+<div>{{b.content}}</div>
+<!-- <div [ngSwitch]="b.category"></div>
+<div class="btn btn-info" *ngSwitchCase="'INTERMEDIATE'">Intermediate</div>
+                    <div class="btn btn-primary" *ngSwitchCase="'BEGINNER'">Beginner</div>
+                    <div class="btn btn-secondary" *ngSwitchCase="'ADVANCED'">Advanced</div> -->
+</div>
+</div>
+
+<div><h3>Add or Remove Data Using *ngFor and *ngIf</h3></div>
+<table>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+<tr *ngFor="let d of Data">
+    <td>{{d.id}}</td>
+    <td>{{d.name1}}</td>
+    <td>{{d.Email}}</td>
+    <td>{{d.action}}</td>
+    <!-- <td>{d.name1}}</td>
+    <td>{{d.Email></td>
+    <td>{{d.Action></td> -->
+
+</tr>
+</tbody>
+</table>
