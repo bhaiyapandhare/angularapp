@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MyserviceService } from '../service/myservice.service';
 
 @Component({
   selector: 'app-practice',
@@ -6,42 +7,54 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./practice.component.css']
 })
 export class PracticeComponent implements OnInit {
+  // showit="";
+//   boss = 'Maruti is Boss of Angular';
+  // showText = ""; 
+// username:string='Sanket';
+// show:boolean = false;
 
-  boss = 'Maruti is Boss of Angular';
-  showText = ""; 
-username:string='Sanket';
-show:boolean = false;
+//   Emp = `Yash is Ang Dev and he is 26 years old talented boy from Sangola`;
 
-  Emp = `Yash is Ang Dev and he is 26 years old talented boy from Sangola`;
+//   display:boolean = true; 
 
-  display:boolean = true; 
-
-  itemImageUrl = '';
+//   itemImageUrl = '';
   constructor() { }
 
   ngOnInit() {
   }
 
-	  onSave(val){    	   
-      this.showText= 'Save button is clicked!' ;
-    console.log("Save button is clicked!", val);   //logic 
-	  }
-    msg:string="";
+  // OnEnroll(val){
+  //   this.showit ='You Have Enrolled for Angular.';
+  //   alert('You Have Enrolled for Angular.');
+  //   console.log('You Have Enrolled for Angular.',val);
+    
+// alert('You Have Enrolled for Angular.') 
+//  }
 
-    onAddCard(){
-this.msg="Product added to cart sucessfully";
-console.log("after buttion press", this.msg);
+	  // onSave(val){    	   
+    //   this.showText= 'Save button is clicked!' ;
+    // console.log("Save button is clicked!", val);   //logic 
+	  // }
+//     msg:string="";
 
-    }
-onWeb:string='';
-    onClick(event){
-      this.onWeb= event.target.value + " Added to cart";  
+//     onAddCard(){
+// this.msg="Product added to cart sucessfully";
+// console.log("after buttion press", this.msg);
 
-    }
-    show1 :string="";
-    onMouseOver(){
-      this.show1 = "You have done it";
+//     }
+// onWeb:string='';
+//     onClick(event){
+//       this.onWeb= event.target.value + " Added to cart";  
 
-    }
+//     }
+//     show1 :string="";
+//     onMouseOver(){
+//       this.show1 = "You have done it";
+
+//     }
+OnEnrollSubmit(){
+  const enroll= new MyserviceService();
+  enroll.OnEnroll();
+}
 
 }

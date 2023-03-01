@@ -1,0 +1,33 @@
+div
+{
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    width:30%;
+    border: 5px solid black;
+    padding-bottom: 20px;
+}
+.one
+{
+    background-color:limegreen;    
+    float: left;  
+}
+.two
+{
+    background-color:orange;
+    float: left;
+}
+.three
+{
+    background-color: hotpink;
+    float: left;
+}
+.b{
+margin-top: 400px;
+margin-right: 100px;
+}

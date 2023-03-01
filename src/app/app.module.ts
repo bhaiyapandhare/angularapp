@@ -48,6 +48,7 @@ import { ReactiveformComponent } from './reactiveform/reactiveform/reactiveform.
 import { TempformassignmentComponent } from './tempformassignment/tempformassignment.component';
 import { AssignReactiveformComponent } from './assign-reactiveform/assign-reactiveform.component';
 import { NewBaseComponent } from './new-base/new-base.component';
+import { AssignmentReactiveFormComponent } from './assignment-reactive-form/assignment-reactive-form.component';
 // import { TemplateFormAssignmentComponent } from './template-form-assignment/template-form-assignment.component';
 
 @NgModule({
@@ -71,6 +72,7 @@ import { NewBaseComponent } from './new-base/new-base.component';
     TempformassignmentComponent,
     AssignReactiveformComponent,
     NewBaseComponent,
+    AssignmentReactiveFormComponent,
     // TemplateFormAssignmentComponent
   ],
   schemas: [

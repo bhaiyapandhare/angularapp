@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { MyserviceService } from '../service/myservice.service';
 
 @Component({
   selector: 'app-templateform-practice',
@@ -14,8 +15,11 @@ export class TemplateformPracticeComponent implements OnInit {
   }
   onSubmit (form:NgForm ){
     console.log(form);
-    
-
   }
+
+onclick(){
+  const clicked =new MyserviceService();
+  clicked.OnEnroll();
+}
 
 }

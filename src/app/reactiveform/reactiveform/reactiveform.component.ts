@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-reactiveform',
@@ -7,12 +8,12 @@ import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./reactiveform.component.css']
 })
 export class ReactiveformComponent implements OnInit {
-
+  NaNames;
   isSubmitted:boolean=false;
   myReactiveForm: FormGroup;
 
   courses:string[]=['Angular','HTML','Javascript'];
-  constructor() { 
+  constructor(private _fb: FormBuilder) { 
     this.createForm();
   }
 
@@ -28,19 +29,28 @@ export class ReactiveformComponent implements OnInit {
   }
 
 
-  createForm()
-  {
-    this.myReactiveForm = new FormGroup({
-      'username' : new FormControl({
-      'email': new FormControl(null, [Validators.required, Validators.email]),
-      'courses':new FormControl('Javascript')
+  createForm(){
+  // {
+  //   this.myReactiveForm = new FormGroup({
+  //     'username' : new FormControl({
+  //     'email': new FormControl(null, [Validators.required, Validators.email], this.NaEmails),
+  //     'courses':new FormControl('Javascript')
   
-    }),
-    'skills': new FormArray([
-      new FormControl(null, Validators.required)
-    ])
-  })
+  //   }),
+  //   'skills': new FormArray([
+  //     new FormControl(null, Validators.required)
+  //   ])
+  // })
 
+  // }
+  this.myReactiveForm = this._fb.group({
+    userDeatils: this._fb.group({
+      username: ['', ],
+      email: ['', [Validators.required, Validators.email], this.NaEmails]
+    }),
+    course: ['Angular'],
+    skills: this._fb.array([])
+   })
   }
 
   OnSubmit() {
@@ -50,5 +60,19 @@ export class ReactiveformComponent implements OnInit {
   }
   OnAddSkills() {
     (<FormArray> this.myReactiveForm.get('skills')).push(new FormControl(null, Validators.required));
+  }
+
+  NaEmails(control: FormControl) : Promise<any> | Observable<any> 
+  {
+    const myResponse = new Promise<any> ((resolve, reject) => {
+      setTimeout(() => {
+        if(control.value == 'codemindtechnology@gmail.com') {
+          resolve({'emailNotAllowed': true})
+        } else {
+          resolve(null)
+        }
+      }, 3000)
+    })
+    return myResponse;
   }
 }
