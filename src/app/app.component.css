@@ -1,4 +1,4 @@
-#space{
+/* #space{
     margin-bottom: 20px;
     background-color: rgb(189, 138, 72);
     font-size: x-large;
@@ -22,3 +22,14 @@ border-style:dotted;
 app-ngstyle{
     padding: 50px;
 }
+
+table,th,tr,td{
+    border: 3px solid black;
+    height: fit-content;
+}
+tr:nth-child(even) {
+    background-color: Lightgreen;
+}
+td{
+width:20px
+} */

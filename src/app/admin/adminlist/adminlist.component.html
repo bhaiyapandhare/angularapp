@@ -1,0 +1,19 @@
+
+<h2>News Data </h2>
+<table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>publisher</th>
+        <th>Title</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of financeData1">
+        <td>{{ item.type }}</td>
+        <td>{{ item.publisher }}</td>
+        <td>{{ item.title }}</td>
+       
+      </tr>
+    </tbody>
+  </table>

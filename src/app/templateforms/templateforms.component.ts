@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-templateforms',
@@ -33,11 +34,13 @@ genders=[
   }
 ]
 
-  constructor() { }
+  constructor(private route:Router) { }
 
   ngOnInit() {
   }
   login(form: NgForm) {
+
+    this.route.navigate(['/product']);
     this.isSubmitted = true;
 console.log(form);
 

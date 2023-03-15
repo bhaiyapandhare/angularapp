@@ -9,6 +9,13 @@ import { Injectable } from '@angular/core';
 })
 
 export class MyserviceService {
+
+  products = [
+    { name: 'Laptop', id: '101'},
+    { name: 'Mobile', id: '102'},
+    {name: 'TV', id: '103'}
+  ]
+
   OnEnroll(){
     alert('You have enrolled for Angular');
   }

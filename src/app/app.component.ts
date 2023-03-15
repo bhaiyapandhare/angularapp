@@ -1,14 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { DemoService } from './service/demo.service';
+import { MyserviceService } from './service/myservice.service';
+import { RapidapiService } from './service/rapidapi.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   name="";
   id = '';
   comp = "";
+  products={};
+  ob1;
+  set:any;
+  news:any;
+
+  namesearch="";
 
   posts = [
     {
@@ -49,6 +59,43 @@ this.comp = val.comp;
   
 //  }
 
+constructor( private rapidService: RapidapiService, private myservice:MyserviceService , private demoService:DemoService){}
+
+ngOnInit(): void {
+
+  // let title =  this.activatedR.snapshot.params['title'];
+  // this.rapidService.getPostByTitle(title).subscribe(u=>{
+  // this.user=u;
+  // })
+
+
+  this.rapidService.getFinance().subscribe((resp:any) =>{
+console.log('user api res', resp);
+this.news= resp.news;
+
+
+  })
+  this.products = this.myservice.products;
+
+ this.demoService.getUsers().subscribe(res => {
+
+  this.set = res;
+  console.log(this.set);
+  
+
+    console.log('user api results', res);
+    console.log(res[0]);
+    console.log(res[1]);
+    console.log(res[5]);
+    
+    this.ob1=res[0];
+    
+    
+    
+  }, err => {
+    console.log(err);
+  })
+}
  }
 
 

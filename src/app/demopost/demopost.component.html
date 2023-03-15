@@ -1,0 +1,25 @@
+<p>demopost works!</p>
+<div>
+    <div>
+        <div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>User Id</th>
+                        <th>Id</th>
+                        <th>Title</th>
+                        <th>Body</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor=" let a of arrPost">
+                        <td>{{a.userId}}</td>
+                        <td>{{a.id}}</td>
+                        <td>{{a.title}}</td>
+                        <td>{{a.body}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

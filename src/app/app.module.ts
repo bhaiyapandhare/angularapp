@@ -15,7 +15,7 @@ import { NgstyleComponent } from './ngstyle/ngstyle.component';
 import { NgclassComponent } from './ngclass/ngclass.component';
 import { DirectiveassignmentComponent } from './directiveassignment/directiveassignment.component';
 import { PracticeComponent } from './practice/practice.component';
-import { CustomDirective } from './custom.directive';
+//import { CustomDirective } from './custom.directive';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
@@ -49,6 +49,26 @@ import { TempformassignmentComponent } from './tempformassignment/tempformassign
 import { AssignReactiveformComponent } from './assign-reactiveform/assign-reactiveform.component';
 import { NewBaseComponent } from './new-base/new-base.component';
 import { AssignmentReactiveFormComponent } from './assignment-reactive-form/assignment-reactive-form.component';
+import { HttpClientModule } from '@angular/common/http';
+import { PipeexampleComponent } from './pipeexample/pipeexample.component';
+import { SearchPipe } from './search.pipe';
+import { ProductFilterComponent } from './product-filter/product-filter.component';
+import { CustomPipePipe } from './custom-pipe.pipe';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { HomeComponent } from './home/home.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { DemopostComponent } from './demopost/demopost.component';
+import { DemouserComponent } from './demouser/demouser.component';
+import { UseridComponent } from './demouser/userid/userid.component';
+import { DemouserdetailsComponent } from './demouserdetails/demouserdetails.component';
+import { ProductModule } from './product/product.module';
+import { OrdersModule } from './orders/orders.module';
+import { FashionModule } from './fashion/fashion.module';
+import { CustomerModule } from './customer/customer.module';
+import { AdminModule } from './admin/admin.module';
+import { NewsandquoteComponent } from './newsandquote/newsandquote.component';
+
 // import { TemplateFormAssignmentComponent } from './template-form-assignment/template-form-assignment.component';
 
 @NgModule({
@@ -65,7 +85,7 @@ import { AssignmentReactiveFormComponent } from './assignment-reactive-form/assi
     NgclassComponent,
     DirectiveassignmentComponent,
     PracticeComponent,
-    CustomDirective,
+    //CustomDirective,
     TemplateformsComponent,
     TemplateformPracticeComponent,
     ReactiveformComponent,
@@ -73,6 +93,20 @@ import { AssignmentReactiveFormComponent } from './assignment-reactive-form/assi
     AssignReactiveformComponent,
     NewBaseComponent,
     AssignmentReactiveFormComponent,
+    PipeexampleComponent,
+    SearchPipe,
+    ProductFilterComponent,
+    CustomPipePipe,
+    AboutusComponent,
+    ContactusComponent,
+    HomeComponent,
+    PagenotfoundComponent,
+    DemopostComponent,
+    DemouserComponent,
+    UseridComponent,
+    DemouserdetailsComponent,
+    NewsandquoteComponent,
+    
     // TemplateFormAssignmentComponent
   ],
   schemas: [
@@ -108,11 +142,23 @@ import { AssignmentReactiveFormComponent } from './assignment-reactive-form/assi
     MatStepperModule,
     MatProgressBarModule, 
     ReactiveFormsModule,
+    HttpClientModule,
+    ProductModule,
+    OrdersModule,
+    FashionModule
+    // CustomerModule,
+    // AdminModule
 
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+constructor(){
+    
+  console.log('AppModule called');
+  
+}
+}
 
 enableProdMode();

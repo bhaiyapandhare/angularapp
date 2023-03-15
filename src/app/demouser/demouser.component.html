@@ -1,0 +1,21 @@
+<!-- <p>demouser works!</p> -->
+<table class="table">
+    <th>Id</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>address</th>
+    <th>Phone</th>
+    <th>Website</th>
+    <th>Company</th>
+  
+    <tr *ngFor=" let s of set">
+  <a [routerLink]="['/demouserdetails',s.id]"> <td >{{s.id}}</td></a>
+      <td>{{s.name}}</td>
+      <td>{{s.email}}</td>
+      <td>{{s.address.street}}-{{s.address.zipcode}}</td>
+      <td>{{s.phone}}</td>
+      <td>{{s.website}}</td>
+      <td>{{s.company.name}}{{s.company.catchPhrase}}</td>
+  
+    </tr>
+  </table>

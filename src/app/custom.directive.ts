@@ -8,7 +8,7 @@ export class CustomDirective {
   constructor(private el: ElementRef , private render: Renderer2) { 
 
     el.nativeElement.style.backgroundColor ="red";
-    el.nativeElement.style.textColor = 'green';
+    //el.nativeElement.style.textColor = 'green';
 
 
 

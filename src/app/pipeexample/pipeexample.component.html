@@ -1,0 +1,29 @@
+<div>
+    todays date:  {{todaysDate | date }}
+</div>
+
+<div> 
+    short date :- {{todaysDate | date:'shortDate' }} <br/>
+    Full date :- {{todaysDate | date:'fullDate' }} <br/> 
+    Formatted date:- {{todaysDate | date:'M/dd/yyyy'}} <br/> 
+    Hours and minutes:- {{todaysDate | date:'h:mm'}} 
+ </div>
+
+ <div> 
+    Date with uppercase :- {{todaysDate | date:'fullDate' | uppercase}} <br/>
+    Date with lowercase :- {{todaysDate | date:'medium' | lowercase}} <br/>  
+ </div>
+
+ <div>
+    Price: <p>{{price | currency:'INR'}}</p>
+ </div>
+
+
+ <div>
+    Json pipe: <p>{{employee | json}}</p>
+ </div>
+
+ <div>
+    <p>Custom pipe example</p>
+    <p>{{countLength | customPipe}}</p>
+ </div>

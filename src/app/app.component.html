@@ -68,7 +68,7 @@
 <app-ngclass></app-ngclass> -->
 
 <!-- <app-ngswitch></app-ngswitch> -->
-<app-practice></app-practice>
+<!-- <app-practice></app-practice> -->
 <!-- <p appCustom> Show This $ and Change Css Prop </p> -->
 <!-- 
 <mat-slide-toggle>Toggle me!</mat-slide-toggle>
@@ -76,7 +76,7 @@
   <input matSliderThumb>
 </mat-slider> -->
 <!-- <app-templateforms></app-templateforms> -->
-<app-templateform-practice></app-templateform-practice>
+<!-- <app-templateform-practice></app-templateform-practice> -->
 
 <!-- <app-tempformassignment></app-tempformassignment> -->
 <!-- <app-assign-reactiveform></app-assign-reactiveform> -->
@@ -85,3 +85,83 @@
 <!-- <app-reactiveform></app-reactiveform> -->
 
 <!-- <app-assignment-reactive-form></app-assignment-reactive-form> -->
+<!-- 
+<ng-container *ngFor="let product of products">
+  Product Name : <strong class="text-success">{{product.name}}</strong>
+  Product Id : <strong class="text-success">{{product.id}}</strong>
+  <br>
+  
+  </ng-container>
+  <ng-container *ngFor="let u of users">
+<strong class="text-success">{{u.id}}</strong>
+<strong class="text-success">{{u.name}}</strong>
+<strong>{{u.email}}</strong>
+</ng-container>
+<br>
+<strong class="text-success">{{ob1.id}}</strong> {{ob1.name}} -->
+
+
+<!-- <ul>
+  <li *ngFor=" let s of set" >
+    {{s.id}}
+    {{s.name}}
+    {{s.email}}
+    {{s.address}}
+    {{s.phone}}
+    {{s.website}}
+    {{s.company}}
+  </li>
+</ul> -->
+
+<!-- <div class="justify-content-center">
+  <div class="col-md-8">
+      <label for="search"><h3>Search By User Name :</h3></label>
+      <input type="text" name="" class="form-control" [(ngModel)]="namesearch" placeholder="enter user name">
+  </div><br>
+<table class="table">
+  <th>Id</th>
+  <th>Name</th>
+  <th>Email</th>
+  <th>address</th>
+  <th>Phone</th>
+  <th>Website</th>
+  <th>Company</th>
+
+  <tr *ngFor=" let s of set | search:namesearch">
+<td>{{s.id}}</td>
+    <td>{{s.name}}</td>
+    <td>{{s.email}}</td>
+    <td>{{s.address.street}}-{{s.address.zipcode}}</td>
+    <td>{{s.phone}}</td>
+    <td>{{s.website}}</td>
+    <td>{{s.company.name}}{{s.company.catchPhrase}}</td>
+
+  </tr>
+</table> -->
+
+<!-- <app-pipeexample></app-pipeexample> -->
+<!-- <app-product-filter></app-product-filter> -->
+
+
+
+<div>
+<header>
+  <nav>
+    <ul class="nav nav-tabs">
+      <li class="nav-items"><a routerLinkActive="active" routerLink="/home" class="nav-link">Home</a></li>
+      <li class="nav-items"><a routerLinkActive="active" routerLink="/aboutus" class="nav-link">About us</a></li>
+      <li class="nav-items"><a routerLinkActive="active" routerLink="/contactus" class="nav-link">Contact us</a></li>
+      <li class="nav-items"><a routerLinkActive="active" routerLink="/product" class="nav-link">Product</a></li>
+      <li class="nav-items"><a routerLinkActive="active" routerLink="/post" class="nav-link">Post</a></li>
+      <li class="nav-items"><a routerLinkActive="active" routerLink="/users" class="nav-link">Users</a></li>
+      <li class="nav-items"><a routerLinkActive="active" routerLink="/login" class="nav-link">Login</a></li>
+      <li class="nav-items"><a routerLinkActive="active" routerLink="/orders" class="nav-link">Orders</a></li>
+      <li class="nav-items"><a routerLinkActive="active" routerLink="/fashion" class="nav-link">Fashion</a></li>
+      <li class="nav-item"> <a  routerLinkActive="active" routerLink="/customer" class="nav-link">Cutomer</a> </li>
+      <li class="nav-item"> <a  routerLinkActive="active" routerLink="/admin" class="nav-link">Admin</a> </li>
+    </ul>
+
+  </nav>
+</header>
+</div>
+<router-outlet></router-outlet>
