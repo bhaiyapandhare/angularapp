@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class RapidapiService {
 
-  url = 'https://yh-finance.p.rapidapi.com/auto-complete?q=tesla&region=US';
+ url = 'https://yh-finance.p.rapidapi.com/auto-complete?q=tesla&region=US';
   constructor(private httpClient: HttpClient) { }
 
   getFinance() {
@@ -18,7 +18,7 @@ export class RapidapiService {
   }
 
 
-  // getPostByTitle(title: string) {
-  //   return this.httpClient.get(this.url+ '/'+ title);
-  //  }
+  getPostByTitle(title: string) {
+    return this.httpClient.get(this.url+ '/'+ title);
+   }
 }

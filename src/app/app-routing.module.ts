@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import { AboutusComponent } from './aboutus/aboutus.component';
-import { AdminlistComponent } from './admin/adminlist/adminlist.component';
+// import { AdminlistComponent } from './admin/adminlist/adminlist.component';
 import { AppComponent } from './app.component';
+import { AuthGuard } from './auth.guard';
 import { ContactusComponent } from './contactus/contactus.component';
 import { CutomerlistComponent } from './customer/cutomerlist/cutomerlist.component';
 import { DemopostComponent } from './demopost/demopost.component';
@@ -20,13 +21,15 @@ import { MobileComponent } from './product/mobile/mobile.component';
 import { ProductComponent } from './product/product.component';
 import { WatchComponent } from './product/watch/watch.component';
 import { TemplateformsComponent } from './templateforms/templateforms.component';
+import { TodoComponent } from './todo/todo.component';
+import { WikipediaComponent } from './wikipedia/wikipedia.component';
 
 const routes: Routes = [
   { path: '', redirectTo:'home', pathMatch:'full'}, // http:localhost:4200 
   { path: 'home', component: HomeComponent},
   { path: 'aboutus', component: AboutusComponent }, // http://localhost:4200/aboutus
   { path: 'contactus', component: ContactusComponent },
-  {path:'product',component:ProductComponent,
+  {path:'product',  canActivate:[AuthGuard], component:ProductComponent,
   children:[
     // {path:'', component:ProductComponent},
     {path:'laptop', component:LaptopComponent},
@@ -54,14 +57,16 @@ const routes: Routes = [
 
 {path: 'customer', loadChildren:'./customer/customer.module#CustomerModule'},
 { path: 'admin', loadChildren: './admin/admin.module#AdminModule'},
+{path:'todo', component:TodoComponent},
 
+{path:'wikipedia', component:WikipediaComponent},
   { path:'**', component:PagenotfoundComponent}
 
 
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes ,{ preloadingStrategy: PreloadAllModules})],
+  imports: [RouterModule.forRoot(routes ,{ preloadingStrategy: PreloadAllModules})], //
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

@@ -66,8 +66,18 @@ import { ProductModule } from './product/product.module';
 import { OrdersModule } from './orders/orders.module';
 import { FashionModule } from './fashion/fashion.module';
 import { CustomerModule } from './customer/customer.module';
-import { AdminModule } from './admin/admin.module';
-import { NewsandquoteComponent } from './newsandquote/newsandquote.component';
+// import { AdminModule } from './admin/admin.module';
+// import { NewsandquoteComponent } from './newsandquote/newsandquote.component';
+import { TodoComponent } from './todo/todo.component';
+import { LoginformComponent } from './loginform/loginform.component';
+import { C1Component } from './product-filter/c1/c1.component';
+import { C2Component } from './product-filter/c2/c2.component';
+import { C3Component } from './product-filter/c3/c3.component';
+import { C4Component } from './product-filter/c4/c4.component';
+import { WikipediaComponent } from './wikipedia/wikipedia.component';
+import { PageListComponent } from './wikipedia/page-list/page-list.component';
+import { SearchBarComponent } from './wikipedia/search-bar/search-bar.component';
+import { HooksComponent } from './hooks/hooks.component';
 
 // import { TemplateFormAssignmentComponent } from './template-form-assignment/template-form-assignment.component';
 
@@ -105,7 +115,17 @@ import { NewsandquoteComponent } from './newsandquote/newsandquote.component';
     DemouserComponent,
     UseridComponent,
     DemouserdetailsComponent,
-    NewsandquoteComponent,
+    // NewsandquoteComponent,
+    TodoComponent,
+    LoginformComponent,
+    C1Component,
+    C2Component,
+    C3Component,
+    C4Component,
+    WikipediaComponent,
+    PageListComponent,
+    SearchBarComponent,
+    HooksComponent,
     
     // TemplateFormAssignmentComponent
   ],

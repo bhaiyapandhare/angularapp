@@ -11,9 +11,8 @@ export class Comp1Component implements OnInit {
   userName;
   // DI 
   constructor(private _utilityService: UtilityService) {
-
     this._utilityService.userName.subscribe(res => {
-      console.log('data comming from subject', res)
+      console.log('comp1', res);
       this.userName = res;
     }, err => {
       console.log('error occured', err);

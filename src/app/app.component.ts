@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { DemoService } from './service/demo.service';
 import { MyserviceService } from './service/myservice.service';
 import { RapidapiService } from './service/rapidapi.service';
+import { WikipediaService } from './service/wikipedia.service';
 
 @Component({
   selector: 'app-root',
@@ -17,6 +18,17 @@ export class AppComponent implements OnInit {
   ob1;
   set:any;
   news:any;
+
+  pages=[];
+  isLoading=false;
+
+  data = 0;
+  onSub(){
+    this.data +=1;
+    
+  }
+
+
 
   namesearch="";
 
@@ -37,6 +49,8 @@ export class AppComponent implements OnInit {
   count:number = 0;
   username:string = "Maruti";
   currentTime = new Date();
+  activatedR: any;
+  user: Object;
 //  imageurl = 'https://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg'  
 
  onclickbutton(){
@@ -54,19 +68,19 @@ this.id = val.id;
 this.comp = val.comp;
 }
 
-//  fromObj(value){
-//   console.log(`From Object`, value);
+ fromObj(value){
+  console.log(`From Object`, value);
   
-//  }
+ }
 
-constructor( private rapidService: RapidapiService, private myservice:MyserviceService , private demoService:DemoService){}
-
+constructor(private rapidService: RapidapiService, private myservice:MyserviceService , private demoService:DemoService ,private wikiService : WikipediaService){}
+// private rapidService: RapidapiService, private myservice:MyserviceService , private demoService:DemoService
 ngOnInit(): void {
 
-  // let title =  this.activatedR.snapshot.params['title'];
-  // this.rapidService.getPostByTitle(title).subscribe(u=>{
-  // this.user=u;
-  // })
+let title =  this.activatedR.snapshot.params['title'];
+  this.rapidService.getPostByTitle(title).subscribe(u=>{
+  this.user=u;
+  })
 
 
   this.rapidService.getFinance().subscribe((resp:any) =>{
@@ -95,6 +109,16 @@ this.news= resp.news;
   }, err => {
     console.log(err);
   })
+}
+
+onTerm(space:string) {
+  this.isLoading=true;
+this.wikiService.getWikiByTitle(space).subscribe((res:any)=>{
+  this.pages = res.query.search;
+  console.log(this.pages);
+  this.isLoading=false;
+
+})
 }
  }
 

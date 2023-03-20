@@ -142,8 +142,43 @@
 <!-- <app-pipeexample></app-pipeexample> -->
 <!-- <app-product-filter></app-product-filter> -->
 
+<!-- <app-comp1></app-comp1> -->
 
 
+
+<!-- <div class="row">
+  <div class="col-md-6">
+    <div>
+      <app-c1></app-c1>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div>
+      <app-c2></app-c2>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div>
+      <app-c3></app-c3>
+    </div>
+  </div>
+
+<div class="col-md-6">
+  <div>
+    <app-c4></app-c4>
+  </div>
+</div>
+</div> -->
+
+
+<!-- <app-wikipedia></app-wikipedia> -->
+
+<br>
+<app-search-bar (submitted)="onTerm($event)"></app-search-bar>
+<app-page-list [pages]="pages" [isLoading]="isLoading"></app-page-list>
+<!-- <router-outlet></router-outlet> -->
+
+<!-- 
 <div>
 <header>
   <nav>
@@ -159,9 +194,15 @@
       <li class="nav-items"><a routerLinkActive="active" routerLink="/fashion" class="nav-link">Fashion</a></li>
       <li class="nav-item"> <a  routerLinkActive="active" routerLink="/customer" class="nav-link">Cutomer</a> </li>
       <li class="nav-item"> <a  routerLinkActive="active" routerLink="/admin" class="nav-link">Admin</a> </li>
+      <li class="nav-item"> <a  routerLinkActive="active" routerLink="/todo" class="nav-link">ToDo</a> </li>
+      <li class="nav-item"> <a  routerLinkActive="active" routerLink="/wikipedia" class="nav-link">Wikipedia</a> </li>
+
     </ul>
 
   </nav>
 </header>
-</div>
-<router-outlet></router-outlet>
+</div> -->
+<button class="btn btn-danger" (click)="onSub()">Change from Parent</button><br>
+<app-hooks [parentData]="data"></app-hooks>
+
+<!-- <router-outlet></router-outlet> -->

@@ -6,7 +6,7 @@ import { BehaviorSubject, Subject } from 'rxjs';
 })
 export class UtilityService {
 
-  //userName = new Subject<any>(); // observable
+  // userName = new Subject<any>(); // observable
 
   userName = new BehaviorSubject<any>('Codemind1122');
   constructor() { }

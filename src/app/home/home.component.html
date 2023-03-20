@@ -2,4 +2,26 @@
 
 <button class="btn btn-primary" (click)="CreatePost()"> Create Post</button><br><br>
 
-<button class="btn btn-success" (click)="getData()"> Get Data</button>
+<button class="btn btn-success" (click)="getData()"> Get Data</button><br><br>
+
+
+<table class="table" *ngIf="show">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Content</th>
+            <th scope="col">Title</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let f of fireBaseArray ">
+            
+            <td>{{f.id}}</td>
+            <td>{{f.content}}</td>
+            <td>{{f.title}}</td>
+
+            
+        </tr>
+    </tbody>
+
+</table>
