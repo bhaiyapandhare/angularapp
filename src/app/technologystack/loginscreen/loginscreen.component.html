@@ -1,0 +1,50 @@
+<!-- <div class="row justify-content-center">
+    <div class="col-md-6 text-left rounded shadow py-5">
+
+<p>loginscreen works!!!</p>
+
+<h2>Course List</h2>
+<p *ngFor="let c of courses">{{ c }}</p>
+</div>
+</div> -->
+<h2> This is custompipe example for square of 4 ={{4 | customPipe}}</h2>
+<h2>{{5|customPipe}}</h2>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-left rounded shadow py-5">
+            <form [formGroup]="signupForm" (ngSubmit)="handleSubmit()">
+                <h2>Login Screen</h2>
+                <div class="form-group">
+                    <label for="username">Email</label>
+                    <input type="text" formControlName="email" class="form-control " id="email"
+                        [class.is-invalid]="f['email'].invalid && f['email'].touched" placeholder="Enter email ">
+                    <div class="alert alert-danger " *ngIf="f['email'].invalid && f['email'].touched">
+                        <div *ngIf="f['email'].errors && f['email'].errors['required']">
+                            Email is required
+                        </div>
+                        <div *ngIf="f['email'].errors && f['email'].errors['pattern']">
+                            Invalid email
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="username">Password</label>
+                    <input type="text" formControlName="password" class="form-control" id="password"
+                        [class.is-invalid]="f['password'].invalid && f['password'].touched"
+                        placeholder="Enter password ">
+                    <div class="alert alert-danger " *ngIf="f['password'].invalid && f['password'].touched">
+                        <div *ngIf="f['password'].errors && f['password'].errors['required']">
+                            password is required
+                        </div>
+                        <div *ngIf="f['password'].errors && f['password'].errors['pattern']">
+                            Invalid password
+                        </div>
+                        
+                    </div>
+                    <br>
+                    <button class="btn btn-primary" [class.disabled]="signupForm.invalid" (click)="onSub()">Login </button> <br>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

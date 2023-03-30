@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
-
+ 
 @Component({
   selector: 'app-reactiveform',
   templateUrl: './reactiveform.component.html',
@@ -13,6 +13,7 @@ export class ReactiveformComponent implements OnInit {
   myReactiveForm: FormGroup;
 
   courses:string[]=['Angular','HTML','Javascript'];
+  
   constructor(private _fb: FormBuilder) { 
     this.createForm();
   }

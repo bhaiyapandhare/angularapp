@@ -21,4 +21,4 @@ export class RapidapiService {
   getPostByTitle(title: string) {
     return this.httpClient.get(this.url+ '/'+ title);
    }
-}
+ }

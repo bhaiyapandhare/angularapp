@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { of } from 'rxjs';
+import { delay } from 'rxjs/operators';
 import { DemoService } from './service/demo.service';
 import { MyserviceService } from './service/myservice.service';
 import { RapidapiService } from './service/rapidapi.service';
@@ -22,8 +24,11 @@ export class AppComponent implements OnInit {
   pages=[];
   isLoading=false;
 
-  data = 0;
-  onSub(){
+  dataDestroy=true;
+  myObservable:any;
+
+  data : string = 'red';
+    onSub(){
     this.data +=1;
     
   }
@@ -76,11 +81,15 @@ this.comp = val.comp;
 constructor(private rapidService: RapidapiService, private myservice:MyserviceService , private demoService:DemoService ,private wikiService : WikipediaService){}
 // private rapidService: RapidapiService, private myservice:MyserviceService , private demoService:DemoService
 ngOnInit(): void {
+this.myObservable = of('this is custom observable').pipe(delay(3000)).subscribe(res=>{
+  console.log('myObservable data', res);
+  
+})
 
-let title =  this.activatedR.snapshot.params['title'];
-  this.rapidService.getPostByTitle(title).subscribe(u=>{
-  this.user=u;
-  })
+// let title =  this.activatedR.snapshot.params['title'];
+//   this.rapidService.getPostByTitle(title).subscribe(u=>{
+//   this.user=u;
+//   })
 
 
   this.rapidService.getFinance().subscribe((resp:any) =>{
@@ -119,6 +128,13 @@ this.wikiService.getWikiByTitle(space).subscribe((res:any)=>{
   this.isLoading=false;
 
 })
+}
+
+handleData(value){
+this.data= value.target.value;
+}
+onDestroy(){
+  this.dataDestroy = false;
 }
  }
 

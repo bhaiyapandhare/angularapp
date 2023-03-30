@@ -78,6 +78,10 @@ import { WikipediaComponent } from './wikipedia/wikipedia.component';
 import { PageListComponent } from './wikipedia/page-list/page-list.component';
 import { SearchBarComponent } from './wikipedia/search-bar/search-bar.component';
 import { HooksComponent } from './hooks/hooks.component';
+import { LoginscreenComponent } from './technologystack/loginscreen/loginscreen.component';
+import { AdduserComponent } from './adduser/adduser.component';
+import { HomepageComponent } from './technologystack/homepage/homepage.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
 
 // import { TemplateFormAssignmentComponent } from './template-form-assignment/template-form-assignment.component';
 
@@ -126,6 +130,10 @@ import { HooksComponent } from './hooks/hooks.component';
     PageListComponent,
     SearchBarComponent,
     HooksComponent,
+    LoginscreenComponent,
+    AdduserComponent,
+    HomepageComponent,
+    RxjsComponent,
     
     // TemplateFormAssignmentComponent
   ],

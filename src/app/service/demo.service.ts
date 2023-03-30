@@ -10,6 +10,9 @@ export class DemoService {
 
   apiUrl = 'https://jsonplaceholder.typicode.com/users';
   constructor(private httpClient: HttpClient) { }
+  products=[
+    {name:'laptopm '}
+  ]
 
 
   getUsers () {
@@ -18,4 +21,7 @@ export class DemoService {
   getPostById(id: number) {
     return this.httpClient.get(this.apiUrl+ '/'+ id);
    }
+   getdata(): string[] {
+    return ['C','C++', 'JAVA', 'Python'];
+}
 }

@@ -173,13 +173,13 @@
 
 <!-- <app-wikipedia></app-wikipedia> -->
 
-<br>
+<!-- <br>
 <app-search-bar (submitted)="onTerm($event)"></app-search-bar>
-<app-page-list [pages]="pages" [isLoading]="isLoading"></app-page-list>
+<app-page-list [pages]="pages" [isLoading]="isLoading"></app-page-list> -->
 <!-- <router-outlet></router-outlet> -->
 
-<!-- 
-<div>
+
+<!-- <div>
 <header>
   <nav>
     <ul class="nav nav-tabs">
@@ -196,13 +196,33 @@
       <li class="nav-item"> <a  routerLinkActive="active" routerLink="/admin" class="nav-link">Admin</a> </li>
       <li class="nav-item"> <a  routerLinkActive="active" routerLink="/todo" class="nav-link">ToDo</a> </li>
       <li class="nav-item"> <a  routerLinkActive="active" routerLink="/wikipedia" class="nav-link">Wikipedia</a> </li>
+      <li class="nav-item"> <a  routerLinkActive="active" routerLink="/hooks" class="nav-link">Hooks</a> </li>
+      <li class="nav-item"> <a  routerLinkActive="active" routerLink="/adduser" class="nav-link">Adduser</a> </li>
+      <li class="nav-item"> <a  routerLinkActive="active" routerLink="/rxjs" class="nav-link">RXJS</a> </li>
 
     </ul>
 
   </nav>
 </header>
 </div> -->
+
+<!-- <button class="btn btn-danger" (click)="onDestroy()">onDestroy</button><br>{{myObservable | async}}
+
+
+<input type="text" placeholder="Enter value" (blur)="handleData($event)">
 <button class="btn btn-danger" (click)="onSub()">Change from Parent</button><br>
-<app-hooks [parentData]="data"></app-hooks>
+<app-hooks [parentData]="data">
+  <h2 #child>
+    This content comes from Parent To Child
+  </h2>
+  <h2 #child2>This is Heading 2 From Parent</h2>
+  <h3 #child3>This is Heading 3 From Parent</h3>
+  <h4 #child4>This is Heading 4 From Parent</h4>
+  <h5 #child5>This is Heading 5 From Parent</h5>
+  <h6 #child6>This is Heading 6 From Parent</h6>
+
+</app-hooks> -->
 
 <!-- <router-outlet></router-outlet> -->
+
+<app-loginscreen></app-loginscreen>

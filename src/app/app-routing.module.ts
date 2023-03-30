@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import { AboutusComponent } from './aboutus/aboutus.component';
+import { AdduserComponent } from './adduser/adduser.component';
 // import { AdminlistComponent } from './admin/adminlist/adminlist.component';
 import { AppComponent } from './app.component';
 import { AuthGuard } from './auth.guard';
@@ -13,6 +14,8 @@ import { FashiondetComponent } from './fashion/fashiondet/fashiondet.component';
 import { FashiongentsComponent } from './fashion/fashiongents/fashiongents.component';
 import { FashionladiesComponent } from './fashion/fashionladies/fashionladies.component';
 import { HomeComponent } from './home/home.component';
+import { HooksComponent } from './hooks/hooks.component';
+import { LoginformComponent } from './loginform/loginform.component';
 import { OrderlistComponent } from './orders/orderlist/orderlist.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { CameraComponent } from './product/camera/camera.component';
@@ -20,8 +23,12 @@ import { LaptopComponent } from './product/laptop/laptop.component';
 import { MobileComponent } from './product/mobile/mobile.component';
 import { ProductComponent } from './product/product.component';
 import { WatchComponent } from './product/watch/watch.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
+import { HomepageComponent } from './technologystack/homepage/homepage.component';
+import { LoginscreenComponent } from './technologystack/loginscreen/loginscreen.component';
 import { TemplateformsComponent } from './templateforms/templateforms.component';
 import { TodoComponent } from './todo/todo.component';
+import { UnsavedchangesGuard } from './unsavedchanges.guard';
 import { WikipediaComponent } from './wikipedia/wikipedia.component';
 
 const routes: Routes = [
@@ -60,6 +67,12 @@ const routes: Routes = [
 {path:'todo', component:TodoComponent},
 
 {path:'wikipedia', component:WikipediaComponent},
+{path:'hooks', component:HooksComponent},
+{path:'adduser' ,component:AdduserComponent , canDeactivate : [UnsavedchangesGuard] },
+{path:'loginscreen', component:HomepageComponent},
+// children:[{path:'login' , component:HomepageComponent}]},
+
+{path:'rxjs' ,component:RxjsComponent},
   { path:'**', component:PagenotfoundComponent}
 
 
