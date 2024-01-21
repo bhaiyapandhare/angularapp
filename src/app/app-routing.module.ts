@@ -73,6 +73,7 @@ const routes: Routes = [
 // children:[{path:'login' , component:HomepageComponent}]},
 
 {path:'rxjs' ,component:RxjsComponent},
+
   { path:'**', component:PagenotfoundComponent}
 
 

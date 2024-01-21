@@ -42,7 +42,7 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
-import { MatSliderModule } from '@angular/material';
+import { MatSliderModule, MatSnackBarModule } from '@angular/material';
 import { TemplateformPracticeComponent } from './templateform-practice/templateform-practice.component';
 import { ReactiveformComponent } from './reactiveform/reactiveform/reactiveform.component';
 import { TempformassignmentComponent } from './tempformassignment/tempformassignment.component';
@@ -82,6 +82,9 @@ import { LoginscreenComponent } from './technologystack/loginscreen/loginscreen.
 import { AdduserComponent } from './adduser/adduser.component';
 import { HomepageComponent } from './technologystack/homepage/homepage.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
+import { CrudComponent } from './CRUD/crud/crud.component';
+import { EmpaddeditComponent } from './CRUD/empaddedit/empaddedit.component';
+
 
 // import { TemplateFormAssignmentComponent } from './template-form-assignment/template-form-assignment.component';
 
@@ -134,6 +137,9 @@ import { RxjsComponent } from './rxjs/rxjs.component';
     AdduserComponent,
     HomepageComponent,
     RxjsComponent,
+    CrudComponent,
+    EmpaddeditComponent,
+    
     
     // TemplateFormAssignmentComponent
   ],
@@ -173,11 +179,13 @@ import { RxjsComponent } from './rxjs/rxjs.component';
     HttpClientModule,
     ProductModule,
     OrdersModule,
-    FashionModule
+    FashionModule,
+    MatSnackBarModule
     // CustomerModule,
     // AdminModule
 
   ],
+  entryComponents:[ EmpaddeditComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

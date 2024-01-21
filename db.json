@@ -1,0 +1,57 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "employees": [
+    {
+      "firstName": "Varsha",
+      "lastName": "Bankar",
+      "email": "varsha@sharmagmail.com",
+      "dob": "2000-06-05T18:30:00.000Z",
+      "gender": "female",
+      "education": "Graduate",
+      "company": "Wipro",
+      "experince": "4",
+      "package": 11,
+      "id": 2
+    },
+    {
+      "firstName": "Pranoti",
+      "lastName": "Ingole",
+      "email": "pingole@11gmail.com",
+      "dob": "2001-07-22T18:30:00.000Z",
+      "gender": "female",
+      "education": "Graduate",
+      "company": "C#",
+      "experince": "3",
+      "package": 8,
+      "id": 7
+    },
+    {
+      "firstName": "Prabhat",
+      "lastName": "Mohanti",
+      "email": "parbhat@gmail.com",
+      "dob": "1992-06-01T18:30:00.000Z",
+      "gender": "male",
+      "education": "Post Graduate",
+      "company": "ITC",
+      "experince": "10",
+      "package": 60,
+      "id": 8
+    }
+  ]
+}
